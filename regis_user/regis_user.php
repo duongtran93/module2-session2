@@ -28,7 +28,7 @@ function saveDataJSON($filename, $name, $email, $phone)
         $arr_data = loadRegistration($filename);
         array_push($arr_data, $contact);
         $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
-        file_put_contents($filename, $jsondata);
+        file_put_contents($arr_data, $jsondata);
         echo "Lưu dữ liệu thành công!";
     } catch (Exception $e) {
         echo "Lỗi: ", $e->getMessage(), "\n";
